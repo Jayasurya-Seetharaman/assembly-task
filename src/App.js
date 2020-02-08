@@ -33,26 +33,21 @@ class App extends Component {
       }),
       loading: false
     })
-    console.log(this.state.feeds);
   }
 
   // Search Feed
   searchFeeds = async (text) => {
-    console.log('text: ' + text);
     let res = await this.state.feeds.filter(feed => feed.title.includes(text));
-    console.log('Len: ' + res.length);
     if (res.length !== 0) {
       this.setState({
         feeds: res,
         showClear: true
       });
     }
-    console.log(res.map(e => e.author));
   }
 
   // Get Feed
   getFeed = async (author) => {
-    console.log('exe');
     this.setState({ loading: true });
     let res = {};
     res = await this.state.feeds.filter(feed => feed.author.includes(author));
@@ -61,7 +56,6 @@ class App extends Component {
         feed: res,
         loading: false
       });
-      console.log(this.state.feed[0]);
     }
   }
 
