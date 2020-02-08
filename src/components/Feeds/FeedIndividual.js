@@ -12,7 +12,7 @@ const FeedIndividual = ({ feed }) => {
                     style={{}}
                 />
                 <h1>{feed.title}</h1>
-                <p>{feed.author}</p>
+                <p><b>Author: </b> {feed.author}</p>
             </div>
         </div>
     ))

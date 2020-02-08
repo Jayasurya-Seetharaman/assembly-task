@@ -13,7 +13,7 @@ const FeedItem = ({ feed: { title, author, thumbnail, url } }) => {
                     className=""
                     style={{ height: '120px', objectFit: 'cover' }} />
 
-                <h3>{title}</h3>
+                <h4>{title}</h4>
             </div>
         </Link>
     )
